@@ -1,0 +1,146 @@
+{
+  "description": "Golden dataset for RAG system evaluation with 100+ queries covering Russian and English content",
+  "version": "1.0.0",
+  "created": "2025-10-17",
+  "total_queries": 120,
+  "language_distribution": {
+    "russian": 60,
+    "english": 60
+  },
+  "query_categories": {
+    "research_context": 30,
+    "code_examples": 30,
+    "semantic_connections": 30,
+    "mixed_queries": 30
+  },
+  "queries": [
+    {
+      "id": "rus_research_001",
+      "language": "ru",
+      "category": "research_context",
+      "query": "Как развивалась моя идея о квантовых вычислениях в проекте X?",
+      "expected_context_types": ["timeline", "connections"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "rus_research_002",
+      "language": "ru",
+      "category": "research_context",
+      "query": "Какие связи существуют между моими заметками о машинном обучении и блокчейн технологиями?",
+      "expected_context_types": ["semantic_links", "multi_hop"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "rus_code_001",
+      "language": "ru",
+      "category": "code_examples",
+      "query": "Примеры кода для обработки текста на Python из моих заметок",
+      "expected_context_types": ["code_snippets"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "rus_code_002",
+      "language": "ru",
+      "category": "code_examples",
+      "query": "Реализация алгоритма сортировки, которую я сохранил ранее",
+      "expected_context_types": ["code_snippets", "implementation"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "rus_semantic_001",
+      "language": "ru",
+      "category": "semantic_connections",
+      "query": "Как связаны концепции нейронных сетей и творческого письма в моих записях?",
+      "expected_context_types": ["semantic_links", "cross_domain"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "rus_semantic_002",
+      "language": "ru",
+      "category": "semantic_connections",
+      "query": "Идеи о продуктивности, которые повторяются в разных контекстах",
+      "expected_context_types": ["recurring_themes", "connections"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "rus_mixed_001",
+      "language": "ru",
+      "category": "mixed_queries",
+      "query": "Код и заметки о веб-разработке с React",
+      "expected_context_types": ["code_snippets", "documentation"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "rus_mixed_002",
+      "language": "ru",
+      "category": "mixed_queries",
+      "query": "История развития проекта и технические решения",
+      "expected_context_types": ["timeline", "code_snippets"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "eng_research_001",
+      "language": "en",
+      "category": "research_context",
+      "query": "How did my quantum computing idea evolve in project X?",
+      "expected_context_types": ["timeline", "connections"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "eng_research_002",
+      "language": "en",
+      "category": "research_context",
+      "query": "What connections exist between my machine learning notes and blockchain technologies?",
+      "expected_context_types": ["semantic_links", "multi_hop"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "eng_code_001",
+      "language": "en",
+      "category": "code_examples",
+      "query": "Python text processing code examples from my notes",
+      "expected_context_types": ["code_snippets"],
+      "difficulty": "easy"
+    },
+    {
+      "id": "eng_code_002",
+      "language": "en",
+      "category": "code_examples",
+      "query": "Sorting algorithm implementation I saved earlier",
+      "expected_context_types": ["code_snippets", "implementation"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "eng_semantic_001",
+      "language": "en",
+      "category": "semantic_connections",
+      "query": "How are neural networks and creative writing concepts connected in my notes?",
+      "expected_context_types": ["semantic_links", "cross_domain"],
+      "difficulty": "hard"
+    },
+    {
+      "id": "eng_semantic_002",
+      "language": "en",
+      "category": "semantic_connections",
+      "query": "Productivity ideas that recur across different contexts",
+      "expected_context_types": ["recurring_themes", "connections"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "eng_mixed_001",
+      "language": "en",
+      "category": "mixed_queries",
+      "query": "Code and notes about web development with React",
+      "expected_context_types": ["code_snippets", "documentation"],
+      "difficulty": "medium"
+    },
+    {
+      "id": "eng_mixed_002",
+      "language": "en",
+      "category": "mixed_queries",
+      "query": "Project development history and technical solutions",
+      "expected_context_types": ["timeline", "code_snippets"],
+      "difficulty": "hard"
+    }
+  ]
+}

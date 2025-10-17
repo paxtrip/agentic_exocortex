@@ -1,0 +1,111 @@
+{
+  "plugin": {
+    "name": "Unified RAG System",
+    "description": "Умный помощник для поиска в личной базе знаний"
+  },
+  "search": {
+    "placeholder": "Задайте вопрос или опишите, что ищете...",
+    "button": "Найти",
+    "loading": "Поиск...",
+    "no_results": "Результаты не найдены",
+    "error": "Ошибка поиска"
+  },
+  "results": {
+    "title": "Результаты поиска",
+    "confidence": "Уверенность",
+    "source": "Источник",
+    "citations": "Цитаты",
+    "view_in_siyuan": "Открыть в SiYuan",
+    "copy": "Копировать",
+    "export": "Экспорт"
+  },
+  "cache": {
+    "status_cached": "Из кэша",
+    "status_fresh": "Свежие данные",
+    "status_stale": "Устаревшие данные",
+    "status_unknown": "Статус неизвестен",
+    "refresh": "Обновить",
+    "clear": "Очистить кэш",
+    "time_ago": "Обновлено {time} назад"
+  },
+  "export": {
+    "title": "Экспорт результатов",
+    "format_markdown": "Markdown",
+    "format_json": "JSON",
+    "format_csv": "CSV",
+    "format_pdf": "PDF",
+    "citation_style_apa": "APA",
+    "citation_style_mla": "MLA",
+    "citation_style_chicago": "Chicago",
+    "download": "Скачать",
+    "copy_clipboard": "Копировать в буфер"
+  },
+  "trace": {
+    "title": "Анализ рассуждений",
+    "confidence_high": "Высокая уверенность",
+    "confidence_medium": "Средняя уверенность",
+    "confidence_low": "Низкая уверенность",
+    "step_llm_generation": "Генерация ответа ИИ",
+    "step_extractive_qa": "Извлечение ответа из текста",
+    "step_vector_search": "Векторный поиск",
+    "step_fts_search": "Полнотекстовый поиск",
+    "step_reranking": "Переранжирование результатов",
+    "step_connection_discovery": "Поиск связей",
+    "step_semantic_analysis": "Семантический анализ",
+    "total_time": "Общее время",
+    "show_details": "Показать детали",
+    "hide_details": "Скрыть детали"
+  },
+  "connections": {
+    "title": "Связи документа",
+    "multi_hop": "Многоуровневые связи",
+    "strength": "Сила связи",
+    "timeline": "Хронология",
+    "graph": "Граф связей"
+  },
+  "code": {
+    "title": "Примеры кода",
+    "language": "Язык",
+    "copy_code": "Копировать код",
+    "view_full": "Показать полностью",
+    "search_examples": "Найти примеры"
+  },
+  "relationships": {
+    "title": "Семантические связи",
+    "type": "Тип связи",
+    "confidence": "Уверенность",
+    "context": "Контекст",
+    "visualize": "Визуализировать"
+  },
+  "settings": {
+    "title": "Настройки",
+    "language": "Язык",
+    "theme": "Тема",
+    "max_results": "Максимум результатов",
+    "cache_enabled": "Включить кэширование",
+    "auto_refresh": "Автообновление",
+    "save": "Сохранить"
+  },
+  "errors": {
+    "network_error": "Ошибка сети. Проверьте подключение.",
+    "server_error": "Ошибка сервера. Попробуйте позже.",
+    "timeout": "Превышено время ожидания.",
+    "no_api_key": "API ключ не настроен.",
+    "invalid_request": "Неверный запрос.",
+    "rate_limited": "Превышен лимит запросов. Попробуйте позже."
+  },
+  "notifications": {
+    "search_completed": "Поиск завершен",
+    "export_completed": "Экспорт завершен",
+    "cache_cleared": "Кэш очищен",
+    "settings_saved": "Настройки сохранены",
+    "error_occurred": "Произошла ошибка"
+  },
+  "help": {
+    "title": "Помощь",
+    "getting_started": "Начало работы",
+    "faq": "Часто задаваемые вопросы",
+    "documentation": "Документация",
+    "support": "Поддержка"
+  }
+}

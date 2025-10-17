@@ -1,5 +1,9 @@
 version: '3.8'
 
+# Unified RAG System - Production Deployment
+# Integrates with existing Traefik setup using traefik_network
+# Services: api.${DOMAIN_NAME}, qd.${DOMAIN_NAME}, siyuan.${DOMAIN_NAME}
+
 services:
   # SiYuan knowledge base
   siyuan:

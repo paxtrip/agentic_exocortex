@@ -1,0 +1,111 @@
+{
+  "plugin": {
+    "name": "Unified RAG System",
+    "description": "Smart assistant for searching personal knowledge base"
+  },
+  "search": {
+    "placeholder": "Ask a question or describe what you're looking for...",
+    "button": "Search",
+    "loading": "Searching...",
+    "no_results": "No results found",
+    "error": "Search error"
+  },
+  "results": {
+    "title": "Search Results",
+    "confidence": "Confidence",
+    "source": "Source",
+    "citations": "Citations",
+    "view_in_siyuan": "Open in SiYuan",
+    "copy": "Copy",
+    "export": "Export"
+  },
+  "cache": {
+    "status_cached": "From cache",
+    "status_fresh": "Fresh data",
+    "status_stale": "Stale data",
+    "status_unknown": "Status unknown",
+    "refresh": "Refresh",
+    "clear": "Clear cache",
+    "time_ago": "Updated {time} ago"
+  },
+  "export": {
+    "title": "Export Results",
+    "format_markdown": "Markdown",
+    "format_json": "JSON",
+    "format_csv": "CSV",
+    "format_pdf": "PDF",
+    "citation_style_apa": "APA",
+    "citation_style_mla": "MLA",
+    "citation_style_chicago": "Chicago",
+    "download": "Download",
+    "copy_clipboard": "Copy to clipboard"
+  },
+  "trace": {
+    "title": "Thinking Analysis",
+    "confidence_high": "High confidence",
+    "confidence_medium": "Medium confidence",
+    "confidence_low": "Low confidence",
+    "step_llm_generation": "AI Response Generation",
+    "step_extractive_qa": "Extract Answer from Text",
+    "step_vector_search": "Vector Search",
+    "step_fts_search": "Full-text Search",
+    "step_reranking": "Result Reranking",
+    "step_connection_discovery": "Connection Discovery",
+    "step_semantic_analysis": "Semantic Analysis",
+    "total_time": "Total time",
+    "show_details": "Show details",
+    "hide_details": "Hide details"
+  },
+  "connections": {
+    "title": "Document Connections",
+    "multi_hop": "Multi-hop connections",
+    "strength": "Connection strength",
+    "timeline": "Timeline",
+    "graph": "Connection graph"
+  },
+  "code": {
+    "title": "Code Examples",
+    "language": "Language",
+    "copy_code": "Copy code",
+    "view_full": "View full",
+    "search_examples": "Find examples"
+  },
+  "relationships": {
+    "title": "Semantic Relationships",
+    "type": "Relationship type",
+    "confidence": "Confidence",
+    "context": "Context",
+    "visualize": "Visualize"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "max_results": "Max results",
+    "cache_enabled": "Enable caching",
+    "auto_refresh": "Auto refresh",
+    "save": "Save"
+  },
+  "errors": {
+    "network_error": "Network error. Check your connection.",
+    "server_error": "Server error. Try again later.",
+    "timeout": "Request timeout.",
+    "no_api_key": "API key not configured.",
+    "invalid_request": "Invalid request.",
+    "rate_limited": "Rate limit exceeded. Try again later."
+  },
+  "notifications": {
+    "search_completed": "Search completed",
+    "export_completed": "Export completed",
+    "cache_cleared": "Cache cleared",
+    "settings_saved": "Settings saved",
+    "error_occurred": "An error occurred"
+  },
+  "help": {
+    "title": "Help",
+    "getting_started": "Getting Started",
+    "faq": "Frequently Asked Questions",
+    "documentation": "Documentation",
+    "support": "Support"
+  }
+}

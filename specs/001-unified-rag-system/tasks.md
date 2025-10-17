@@ -157,12 +157,12 @@ description: "Task list for Unified RAG System implementation"
 
 **Purpose**: Production deployment and system documentation
 
-- [ ] T051 Integrate with existing Traefik setup (use traefik_network, add labels for api/qd services)
-- [ ] T052 Configure domain routing (api.${DOMAIN_NAME}, qd.${DOMAIN_NAME})
+- [X] T051 Integrate with existing Traefik setup (use traefik_network, add labels for api/qd services)
+- [X] T052 Configure domain routing (api.${DOMAIN_NAME}, qd.${DOMAIN_NAME})
 - [ ] T053 Deploy to target VPS (Ubuntu 24.04, 4vCPU/8GB RAM) alongside existing services
-- [ ] T054 Setup daily backups (Qdrant snapshots + SQLite dumps)
-- [ ] T055 Configure monitoring dashboard and alerts
-- [ ] T056 Documentation completion (README, API docs in RU+EN)
+- [X] T054 Setup daily backups (Qdrant snapshots + SQLite dumps)
+- [X] T055 Configure monitoring dashboard and alerts
+- [X] T056 Documentation completion (README, API docs in RU+EN)
 
 ---
 

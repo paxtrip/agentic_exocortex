@@ -11,10 +11,11 @@ the best available model but clearly indicate when we're using fallbacks.
 
 import asyncio
 import logging
+import os
 from dataclasses import dataclass
 from datetime import datetime, timedelta
 from enum import Enum
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional
 
 logger = logging.getLogger(__name__)
 
@@ -102,7 +103,9 @@ class LLMRouter:
             name="openrouter",
             api_key_env="OPENROUTER_API_KEY",
             base_url="https://openrouter.ai/api/v1",
-            model="meta-llama/llama-3.1-8b-instruct:free",
+            model=os.getenv(
+                "OPENROUTER_MODEL", "meta-llama/llama-3.1-8b-instruct:free"
+            ),
             priority=3,
             rate_limit_per_minute=20,
             timeout_seconds=25,
@@ -170,8 +173,12 @@ class LLMRouter:
                 continue
 
         # All providers failed - return minimal response
+        # All providers failed - return minimal response
         return LLMResponse(
-            content="Извините, все LLM провайдеры временно недоступны. Попробуйте позже или используйте поиск без генерации ответа.",
+            content=(
+                "Извините, все LLM провайдеры временно недоступны. "
+                "Попробуйте позже или используйте поиск без генерации ответа."
+            ),
             provider="fallback",
             confidence=0.0,
         )
@@ -197,18 +204,18 @@ class LLMRouter:
         # Limit context to prevent token overflow
         context_text = "\n\n".join(context[:5])  # Max 5 context items
 
-        return f"""Используйте предоставленный контекст для ответа на вопрос. Если контекст не релевантен, ответьте на основе ваших знаний.
-
-Контекст:
-{context_text}
-
-Вопрос: {prompt}
-
-Ответ:"""
+        return (
+            f"Используйте предоставленный контекст для ответа на вопрос. "
+            f"Если контекст не релевантен, ответьте на основе ваших знаний.\n\n"
+            f"Контекст:\n{context_text}\n\n"
+            f"Вопрос: {prompt}\n\n"
+            f"Ответ:"
+        )
 
     async def _call_provider(self, provider: ProviderState, prompt: str) -> LLMResponse:
         """Call a specific provider (placeholder implementation)."""
-        # This is a placeholder - in real implementation, this would make actual API calls
+        # This is a placeholder - in real implementation,
+        # this would make actual API calls
         # For now, simulate different response qualities based on provider
 
         await asyncio.sleep(0.1)  # Simulate network delay
@@ -245,7 +252,8 @@ class LLMRouter:
         if provider.consecutive_failures >= self.max_consecutive_failures:
             provider.status = ProviderStatus.FAILED
             logger.error(
-                f"Provider {provider.config.name} marked as FAILED after {provider.consecutive_failures} failures"
+                f"Provider {provider.config.name} marked as FAILED after "
+                f"{provider.consecutive_failures} failures"
             )
         elif provider.consecutive_failures >= self.failure_threshold:
             provider.status = ProviderStatus.DEGRADED

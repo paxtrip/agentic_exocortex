@@ -14,7 +14,7 @@ services:
     volumes:
       - siyuan_data:/opt/siyuan/workspace
     environment:
-      - SIYUAN_ACCESS_AUTH_CODE=${SIYUAN_AUTH_CODE:-}
+      - SIYUAN_ACCESS_AUTH_CODE=${SIYUAN_AUTH_CODE:?Please set SIYUAN_AUTH_CODE in .env file}
     networks:
       - traefik_network
     labels:

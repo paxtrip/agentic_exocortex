@@ -14,7 +14,7 @@ services:
     volumes:
       - siyuan_data:/opt/siyuan/workspace
     env_file:
-      - .env
+      - ../.env
     environment:
       - SIYUAN_ACCESS_AUTH_CODE=${SIYUAN_AUTH_CODE}
     networks:
@@ -34,6 +34,8 @@ services:
     ports:
       - "6333:6333"
       - "6334:6334"
+    env_file:
+      - ../.env
     volumes:
       - qdrant_data:/qdrant/storage
     networks:
@@ -55,7 +57,7 @@ services:
     ports:
       - "8000:8000"
     env_file:
-      - .env
+      - ../.env
     environment:
       - QDRANT_URL=http://qdrant:6333
       - SIYUAN_URL=http://siyuan:6806

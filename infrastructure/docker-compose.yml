@@ -16,7 +16,7 @@ services:
     env_file:
       - .env
     environment:
-      - SIYUAN_ACCESS_AUTH_CODE=${SIYUAN_AUTH_CODE:?Please set SIYUAN_AUTH_CODE in .env file}
+      - SIYUAN_ACCESS_AUTH_CODE=${SIYUAN_AUTH_CODE}
     networks:
       - traefik_network
     labels:

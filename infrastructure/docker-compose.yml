@@ -12,7 +12,7 @@ services:
     ports:
       - "6806:6806"
     volumes:
-      - siyuan_data:/opt/siyuan/workspace
+      - siyuan_data:/siyuan/workspace
     env_file:
       - ../.env
     environment:

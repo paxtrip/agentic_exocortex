@@ -13,6 +13,8 @@ services:
       - "6806:6806"
     volumes:
       - siyuan_data:/opt/siyuan/workspace
+    env_file:
+      - .env
     environment:
       - SIYUAN_ACCESS_AUTH_CODE=${SIYUAN_AUTH_CODE:?Please set SIYUAN_AUTH_CODE in .env file}
     networks:
@@ -52,6 +54,8 @@ services:
     container_name: unified-rag-api
     ports:
       - "8000:8000"
+    env_file:
+      - .env
     environment:
       - QDRANT_URL=http://qdrant:6333
       - SIYUAN_URL=http://siyuan:6806
